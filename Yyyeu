@@ -1,0 +1,12 @@
+def make_counter():
+    count = 0
+    def incrementer():
+        nonlocal count
+        count += 1
+        return count
+    return incrementer
+
+counter = make_counter()
+print(counter())  # Выведет 1
+print(counter())  # Выведет 2
+print(counter())  # Выведет 3
